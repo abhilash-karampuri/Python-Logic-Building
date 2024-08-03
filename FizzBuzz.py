@@ -10,4 +10,5 @@ def fizzbuzz(n):
             print("Buzz")
         else:
             print(x)
-fizzbuzz(100)
+n=int(input())
+fizzbuzz(n)
