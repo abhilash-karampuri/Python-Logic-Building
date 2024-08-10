@@ -1,0 +1,4 @@
+#reverse a list without append
+list=[23,76,34,23,55]
+revlist=list[::-1]
+print(revlist)
