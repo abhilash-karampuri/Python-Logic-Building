@@ -1,0 +1,14 @@
+#leetcode- Product of list except itself
+list=[1,2,3,4]
+#[24,12,8,6]
+newlist=[]
+product=1
+for x in list:
+    product*=x
+    x+=1
+print(product)
+for y in list:
+    elem=product//y
+    newlist.append(elem)
+print(newlist)
+    
