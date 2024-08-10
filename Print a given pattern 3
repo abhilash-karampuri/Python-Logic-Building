@@ -1,0 +1,20 @@
+'''
+PROGRAM---odd
+G
+GR
+GRA
+GRAM
+GRAMP
+GRAMPR
+GRAMPRO
+'''
+str="PROGRAM"
+newstr=""
+maxindex=len(str)-1
+for x in range(3,maxindex+1):
+    newstr+=str[x]
+    print(newstr)
+for y in range(0,maxindex-3):
+    newstr+=str[y]
+    print(newstr)
+    
