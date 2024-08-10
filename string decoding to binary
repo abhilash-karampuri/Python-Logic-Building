@@ -1,0 +1,22 @@
+'''
+string decoding
+a=0----0
+b=1----1
+c=2----0
+d=3----1
+even posiions -----0
+odd positions -----1
+'''
+str=input("Enter a string: ")
+str=str.replace(" ", "")
+list = [chr(i) for i in range(ord('a'), ord('z') + 1)]
+newstr=""
+for x in str:
+    index=list.index(x)
+    if index%2==0:
+        x="0"
+        newstr+=x
+    else:
+        x="1"
+        newstr+=x
+print(newstr)
