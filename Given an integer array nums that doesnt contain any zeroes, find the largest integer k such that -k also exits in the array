@@ -1,0 +1,21 @@
+#leetcode -  Given an integer array nums that doesnt contain any zeroes, find the largest integer k such that -k also exits inthe array
+#if -k exists return k or else return -1
+nums = []  # Create an empty list to store the integers
+n = int(input("Enter the length of the list: "))  # Get the length of the list
+
+for _ in range(n):  # Loop n times to get n inputs
+    elem = int(input())  # Get user input and convert it to an integer
+    nums.append(elem)  # Append the input integer to the list
+
+# Convert list to a set for O(1) average-time complexity lookups
+nums_set = set(nums)
+
+# Initialize k to -1
+k = -1
+
+# Check each number in the list
+for num in nums:
+    if -num in nums_set:  # Check if -num exists in the set
+        k = max(k, num)  # Update k to be the maximum of current k and num
+
+print(k)  # Output the result
