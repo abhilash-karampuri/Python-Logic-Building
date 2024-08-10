@@ -1,0 +1,27 @@
+#Print next three alphabets for given alphabets in order
+alphabets = []
+for i in range(97, 123):  
+    alphabets.append(chr(i)) 
+
+# Print the list to verify
+print(alphabets)
+
+user_input = input("Enter an alphabet: ").lower()
+
+if len(user_input) == 1 and user_input in alphabets:
+    # Find the index of the entered alphabet
+    index = alphabets.index(user_input)
+
+    if index + 1 < len(alphabets):
+        print(alphabets[index+1])
+        
+        if index + 2 < len(alphabets):
+            print(alphabets[index+2])
+            if index + 3 < len(alphabets):
+                print(alphabets[index+3])
+    else:
+        print("a")
+        print("b")
+        print("c")
+else:
+    print("Invalid Input")
