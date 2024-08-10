@@ -1,0 +1,23 @@
+#find extra substring among two lists --Leetcode
+s="abcdp"
+t="abcd"
+list1=[]
+list2=[]
+for x in s:
+    list1.append(x)
+for y in t:
+    list2.append(y)
+print(list1)
+print(list2)
+if len(list1)<len(list2):
+    for i in list2:
+        if i in list1:
+            continue
+        else:
+            print(i)
+else:
+    for i in list1:
+        if i in list2:
+            continue
+        else:
+            print(i)
